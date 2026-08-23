@@ -7,7 +7,9 @@ authors = [
     { name = "juliendlt", email = "juju.delmotte@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "requests>=2.34.2",
+]
 
 [project.scripts]
 velib-realtime-analytics = "velib_realtime_analytics:main"
