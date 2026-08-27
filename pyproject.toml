@@ -9,12 +9,17 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "kafka-python>=3.0.11",
+    "pydantic>=2.13.4",
+    "pyyaml>=6.0.3",
     "requests>=2.34.2",
 ]
 
 [project.scripts]
-velib-realtime-analytics = "velib_realtime_analytics:main"
+producer = "velib_realtime_analytics.producer.runners.local_runner:main"
 
 [build-system]
 requires = ["uv_build>=0.12.3,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.uv]
+system-certs = true

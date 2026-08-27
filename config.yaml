@@ -1,0 +1,3 @@
+api_url: "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/records"
+kafka_topic: "velib-paris"
+poll_interval: 100
