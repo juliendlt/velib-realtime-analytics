@@ -43,4 +43,4 @@ class BaseKafkaProducer(ABC):
             except Exception as e:
                 print(f"Erreur : {e}")
 
-            time.sleep(60)
+            time.sleep(self.interval)

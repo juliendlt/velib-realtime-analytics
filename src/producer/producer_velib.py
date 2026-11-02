@@ -4,9 +4,9 @@ from producer.base_kafka_producer import BaseKafkaProducer
 
 class VelibProducer(BaseKafkaProducer):
 
-    def __init__(self, bootstrap_servers: list[str]):
+    def __init__(self, bootstrap_servers: list[str],interval: int=60, topic: str="velib-paris"):
         self.url = "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/exports/json"
-        super().__init__(bootstrap_servers, interval=60, topic="velib-paris")
+        super().__init__(bootstrap_servers, interval, topic)
 
     def get_data(self):
         return requests.get(self.url, timeout=30).json()
